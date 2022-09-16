@@ -1,0 +1,18 @@
+{
+    "menu" : [
+        {
+            "user" : [
+                {
+                    "id_menu" : 1,
+                    "menu" : "user.py"
+                }
+            ],
+            "product" : [
+                {
+                    "id_menu" : 2,
+                    "menu" : "product.py"
+                }
+            ]
+        }
+    ]
+}
