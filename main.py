@@ -10,6 +10,7 @@
 # looping(n)
 
 import os
+import pandas as pd
 import json
 import pathlib
 from time import sleep
@@ -49,11 +50,29 @@ def login():
     f.close()
 
 def home():
+    mypath = pathlib.Path().resolve()
+    #print(mypath/'aaa')
+    with open(pathlib.Path().resolve()/'menu.json','r') as f:
+        data = json.load(f)
     clear_screen()
-    CreateUser = createUser(100)
-    val = CreateUser.getVal()
-    print(val)
-    print("selamat datang")
+    
+    # CreateUser = createUser(100)
+    # val = CreateUser.getVal()
+    # print(val)
+    
+    print("=======================")
+    print("          Menu         ")
+    print("=======================")
+    
+    s = '{"col1":{"row2":2,"row3":3},"col2":{"row2":"y","row3":"z"}}'
+    df = pd.read_json(s)
+    print(df)
+    # for m in data['menu']:
+    #     df = pd.read_json(m)
+    #     print(df)
+    menu = int(input("Masukan kode menu akses : "))
+    f.close()
+
 
 clear_screen()
 login()
